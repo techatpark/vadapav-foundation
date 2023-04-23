@@ -12,9 +12,9 @@
 </head>
 <body>
 
-<figure class="figure">
-    <img id="hallstatt" src="/images/vada-pav-aloo.png" class="figure-img img-fluid rounded" alt="...">
-    <figcaption class="figure-caption">A caption for the above <b>image</b>.</figcaption>
+<figure class="text-center">
+    <img id="hallstatt" src="/images/vada-pav-aloo.png" class="img-fluid rounded mx-auto d-block" alt="...">
+    <figcaption class="figure-caption">Vadapav Microservice</figcaption>
 </figure>
 
 
@@ -28,13 +28,14 @@
             readOnly: true
           });
 
-          var urls = [
-  '/api/platform',
-  '/api/foundation',
-  '/api/chutni',
-  '/api/bonda'
-];
+          const host = ""
 
+          var urls = [
+          host + '/api/platform',
+          host + '/api/foundation',
+          host + '/api/chutni',
+          host + '/api/bonda'
+];
 
           // Maps each URL into a fetch() Promise
         var requests = urls.map(function(url){
@@ -133,6 +134,12 @@ Promise.all(requests)
     "id": "#0a299ee6-686a-4e2c-bfd2-61ed3da99369"
   }
 ]);
+
+
+  let  imageName = "/images/vada-pav-"+ rArray[3] + "-" + rArray[2] + ".png"
+
+
+  document.getElementById("hallstatt").src=imageName;
 
 }).catch(function(err) {
   console.log("returns just the 1st failure ...");
