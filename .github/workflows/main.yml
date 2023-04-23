@@ -35,6 +35,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          target: ${{ secrets.SOFTWARES_DIR }}
+          target: ${{ secrets.TARGET_DIR }}
           script:
             cd ~/foundation/ && sh deploy.sh
