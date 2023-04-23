@@ -37,4 +37,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           target: ${{ secrets.SOFTWARES_DIR }}
           script:
-            v_deploy
+            source ~/.profile && v_deploy
