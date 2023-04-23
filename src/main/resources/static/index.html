@@ -136,7 +136,7 @@ Promise.all(requests)
 ]);
 
 
-  let  imageName = "/images/vada-pav-"+ rArray[3] + "-" + rArray[2] + ".png"
+  let  imageName = "/images/vada-pav-"+ rArray[3].replace("\"", "") + "-" + rArray[2].replace("\"", "") + ".png"
 
 
   document.getElementById("hallstatt").src=imageName;
