@@ -29,7 +29,7 @@ jobs:
           source: "target/*.jar"
           target: ${{ secrets.TARGET_DIR }}
           strip_components: 1
-      - name: Deploy
+      - name: Deploy Foundation
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
